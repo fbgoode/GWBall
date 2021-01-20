@@ -3,6 +3,18 @@ div {
     background-color: rgba(0, 0, 255, 0.384);
 }
 
+/* Fuentes */
+
+@font-face {
+    font-family: DIGII;
+    src: url(/fonts/DS-DIGII.ttf);
+}
+
+@font-face {
+    font-family: Roboto-BCI;
+    src: url(/fonts/Roboto-BoldCondensedItalic.ttf);
+}
+
 /* Clases */
 
 .screen {
@@ -30,8 +42,17 @@ div {
     fill: none;
 }
 .crush {
-    font-family: Roboto;
+    font-family: Roboto-BCI;
     font-size: 77%;
+}
+.score {
+    position:absolute;
+    top:0;
+    right:0;
+    font-family: DIGII;
+    font-size:1.5em;
+    letter-spacing: 5px;
+    padding: 4px;
 }
 
 /* IDs */
