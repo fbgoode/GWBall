@@ -1,0 +1,172 @@
+
+div {
+    background-color: rgba(0, 0, 255, 0.384);
+}
+
+/* Clases */
+
+.screen {
+    position:absolute;
+    width: 254px;
+    height: 162px;
+    margin-top: 96px;
+}
+.sizemaster {
+    position:absolute;
+    width: 606px;
+    height: 400px;
+}
+.ball {
+    position:absolute;
+    width:10px;
+    height:10px;
+    border-radius: 50%;
+    background-color:black;
+}
+.svgline {
+    stroke:black;
+    stroke-width:4;
+    stroke-linecap: round;
+    fill: none;
+}
+.crush {
+    font-family: Roboto;
+    font-size: 77%;
+}
+
+/* IDs */
+
+#container {
+    display:flex;
+    justify-content:center;
+}
+#reference {
+    background-image: url(/img/guia.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#screenref {
+    background-image: url(/img/guia2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#b11 {
+    top:56%;
+    left:24%;
+}
+#b12 {
+    top:43%;
+    left:24.5%;
+}
+#b13 {
+    top:31%;
+    left:26%;
+}
+#b14 {
+    top:20%;
+    left:30%;
+}
+#b15 {
+    top:12%;
+    left:36%;
+}
+#b16 {
+    top:7%;
+    left:44%;
+}
+#b17 {
+    top:7%;
+    right:44%;
+}
+#b18 {
+    top:12%;
+    right:36%;
+}
+#b19 {
+    top:20%;
+    right:30%;
+}
+#b110 {
+    top:31%;
+    right:26%;
+}
+#b111 {
+    top:43%;
+    right:24.5%;
+}
+#b112 {
+    top:56%;
+    right:24%;
+}
+#b21 {
+    top:56%;
+    left:30%;
+}
+#b22 {
+    top:44.5%;
+    left:30.5%;
+}
+#b23 {
+    top:33%;
+    left:32.5%;
+}
+#b24 {
+    top:23.5%;
+    left:37%;
+}
+#b25 {
+    top:18.5%;
+    left:44%;
+}
+#b26 {
+    top:18.5%;
+    right:44%;
+}
+#b27 {
+    top:23.5%;
+    right:37%;
+}
+#b28 {
+    top:33%;
+    right:32.5%;
+}
+#b29 {
+    top:44.5%;
+    right:30.5%;
+}
+#b210 {
+    top:56%;
+    right:30%;
+}
+#b31 {
+    top:56%;
+    left:36%;
+}
+#b32 {
+    top:45.5%;
+    left:36.5%;
+}
+#b33 {
+    top:35.5%;
+    left:39%;
+}
+#b34 {
+    top:29%;
+    left:44.5%;
+}
+#b35 {
+    top:29%;
+    right:44.5%;
+}
+#b36 {
+    top:35.5%;
+    right:39%;
+}
+#b37 {
+    top:45.5%;
+    right:36.5%;
+}
+#b38 {
+    top:56%;
+    right:36%;
+}
