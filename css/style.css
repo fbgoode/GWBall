@@ -7,12 +7,12 @@
 
 @font-face {
     font-family: DIGI;
-    src: url(/fonts/DIGI.ttf);
+    src: url(../fonts/DIGI.ttf);
 }
 
 @font-face {
     font-family: Roboto-BCI;
-    src: url(/fonts/Roboto-BoldCondensedItalic.ttf);
+    src: url(../fonts/Roboto-BoldCondensedItalic.ttf);
 }
 
 /* Clases */
@@ -84,7 +84,7 @@
     justify-content:center;
 }
 #reference {
-    background-image: url(/img/guia.png);
+    background-image: url(../img/guia.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
