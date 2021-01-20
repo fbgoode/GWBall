@@ -1,13 +1,13 @@
 
-div {
+/* div {
     background-color: rgba(0, 0, 255, 0.384);
-}
+} */
 
 /* Fuentes */
 
 @font-face {
-    font-family: DIGII;
-    src: url(/fonts/DS-DIGII.ttf);
+    font-family: DIGI;
+    src: url(/fonts/DIGI.ttf);
 }
 
 @font-face {
@@ -21,7 +21,10 @@ div {
     position:absolute;
     width: 254px;
     height: 162px;
-    margin-top: 96px;
+    margin-top: 97px;
+}
+.backlight {
+    background: #9baf9d;
 }
 .sizemaster {
     position:absolute;
@@ -34,6 +37,7 @@ div {
     height:10px;
     border-radius: 50%;
     background-color:black;
+    opacity: 0.1;
 }
 .svgline {
     stroke:black;
@@ -49,10 +53,28 @@ div {
     position:absolute;
     top:0;
     right:0;
-    font-family: DIGII;
-    font-size:1.5em;
-    letter-spacing: 5px;
-    padding: 4px;
+    font-family: DIGI;
+    font-size:1.7em;
+    letter-spacing: 0.1em;
+    padding: 2px;
+}
+.timeColon {
+    top:-0.1em;
+    right:1.23em;
+}
+.timeColon div:nth-child(1) {
+    position:absolute;
+    bottom:0.4em;
+    right: 0.04em
+}
+.off {
+    opacity: 0.1;
+}
+.allon * {
+    opacity: 1;
+}
+.on {
+    opacity: 1;
 }
 
 /* IDs */
@@ -63,11 +85,6 @@ div {
 }
 #reference {
     background-image: url(/img/guia.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#screenref {
-    background-image: url(/img/guia2.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
