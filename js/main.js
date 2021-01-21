@@ -1,8 +1,8 @@
 document.addEventListener('keydown', inputManager);
 
-var beepM = new Audio("/wav/move.wav");
-var beepC = new Audio("/wav/catch.wav");
-var beepF = new Audio("/wav/fail.wav");
+var beepM = new Audio("../wav/move.wav");
+var beepC = new Audio("../wav/catch.wav");
+var beepF = new Audio("../wav/fail.wav");
 const screenObj = document.getElementById("screen");
 const bodyObj = document.getElementById("body");
 const scoreObj = document.getElementById("score");
@@ -24,12 +24,15 @@ var gameN = 0;
 function inputManager (e) {
     switch (e.key) {
         case "a":
+        case "A":
             gameStartA();
             break;
         case "b":
+        case "B":
             gameStartB();
             break;
         case "t":
+        case "T":
             displayTime();
             break;
         case "ArrowLeft":

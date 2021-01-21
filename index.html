@@ -1,36 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Game & Watch "Ball" in HTML, CSS and JS</title>
 
-    <link rel="shortcut icon" href="#">
-    <link href="css/style.css" type="text/css" rel="stylesheet">
-</head>
-<body>
-    
-    <div id="reference" class="centered sizemaster">
-
-    </div>
-    <div id="container" class="centered sizemaster">
-        <div class="centered screen backlight">
-            <svg id="sides" width="254" height="162" fill="black">
-                <path d="M 0 162 l 0 -91 l 9 9 a 5 5 0 0 1 2 3 l 0 75 a 4 4 0 0 0 4 4" />
-                <path d="M 0 162 l 0 -91 l 9 9 a 5 5 0 0 1 2 3 l 0 75 a 4 4 0 0 0 4 4" transform="translate(254 0) scale(-1,1)" />
-            </svg>
-        </div>
-        <div id="screen" class="centered screen">
-            <div class="score off">8888</div>
-            <div id="timeColon" class="score timeColon off"><div>.</div><div>.</div></div>
-            <div id="time" class="score off"></div>
-            <div id="score" class="score off"></div>
-            <div id="b11" class="ball"></div><div id="b12" class="ball"></div><div id="b13" class="ball"></div><div id="b14" class="ball"></div><div id="b15" class="ball"></div><div id="b16" class="ball"></div><div id="b17" class="ball"></div><div id="b18" class="ball"></div><div id="b19" class="ball"></div><div id="b110" class="ball"></div><div id="b111" class="ball"></div><div id="b112" class="ball"></div>
-            <div id="b21" class="ball"></div><div id="b22" class="ball"></div><div id="b23" class="ball"></div><div id="b24" class="ball"></div><div id="b25" class="ball"></div><div id="b26" class="ball"></div><div id="b27" class="ball"></div><div id="b28" class="ball"></div><div id="b29" class="ball"></div><div id="b210" class="ball"></div>
-            <div id="b31" class="ball"></div><div id="b32" class="ball"></div><div id="b33" class="ball"></div><div id="b34" class="ball"></div><div id="b35" class="ball"></div><div id="b36" class="ball"></div><div id="b37" class="ball"></div><div id="b38" class="ball"></div>
-            <svg id="man" width="254" height="162" fill="black">
-                <g id="body" class="off">
-                    <circle cx="127" cy="127" r="11"/>
+    <link rel="shortcut icon" href="#" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="container" class="sizemaster">
+      <div id="console" class="sizemaster">
+        <div id="frontBody" class="sizemaster">
+          <div id="groove">
+            <div id="grooveInner" class="abs">
+              <div id="screenGroove" class="abs"></div>
+              <div id="screenOuter" class="abs"></div>
+              <div id="logo" class="abs"></div>
+              <div id="BALL" class="abs">
+                <span class="text ballText">BALL</span>
+              </div>
+              <div id="labels" class="abs">
+                <div class="label">
+                  <span class="text labelText">GAME</span>
+                  <span class="text gameText">A</span>
+                </div>
+                <div class="label">
+                  <span class="text labelText">GAME</span>
+                  <span class="text gameText">B</span>
+                </div>
+                <div class="label">
+                  <span class="text labelText">TIME</span>
+                </div>
+              </div>
+              <div id="buttons" class="abs">
+                <div class="buttonOuter">
+                  <div id="buttonA" class="button"></div>
+                </div>
+                <div class="buttonOuter">
+                  <div id="buttonB" class="button"></div>
+                </div>
+                <div class="buttonOuter">
+                  <div id="buttonT" class="button"></div>
+                </div>
+              </div>
+              <div id="ACL" class="abs">
+                <div class="abs">
+                  <svg viewBox="0 0 100 60" width="100%">
+                    <path d="M 20 0 l 60 0 l 20 25 l -50 35 l -50 -35 l 20 -25" fill="none" stroke="black" stroke-width="3" stroke-linecap="round" />
+                  </svg>
+                </div>
+                <div class="aclText text">ACL</div>
+              </div>
+              <div id="dot" class="abs"></div>
+              <div id="lButtonSet" class="abs buttonSet">
+                <div id="lLabel" class="bLabel centers">
+                  <svg viewBox="0 0 100 50" class="arrow">
+                    <path d="M 0 0 l 100 25 l -100 25" transform="translate(100 0) scale(-1,1)" fill="black"/>
+                  </svg>
+                  <span class="bLabelText text">LEFT</span>
+                </div>
+                <div id="lSlot" class="mButtonSlot centers">
+                  <div id="lButton" class="mButton"></div>
+                </div>
+              </div>
+              <div id="rButtonSet" class="abs buttonSet">
+                <div id="rLabel" class="bLabel centers">
+                  <span class="bLabelText text">RIGHT</span>
+                  <svg viewBox="0 0 100 50" class="arrow">
+                    <path d="M 0 0 l 100 25 l -100 25" fill="black"/>
+                  </svg>
+                </div>
+                <div id="lSlot" class="mButtonSlot centers">
+                  <div id="lButton" class="mButton"></div>
+                </div>
+              </div>
+              <div class="screen backlight abs">
+                <svg id="sides" width="254" height="162" fill="black">
+                  <path
+                    d="M 0 162 l 0 -91 l 9 9 a 5 5 0 0 1 2 3 l 0 75 a 4 4 0 0 0 4 4"
+                  />
+                  <path
+                    d="M 0 162 l 0 -91 l 9 9 a 5 5 0 0 1 2 3 l 0 75 a 4 4 0 0 0 4 4"
+                    transform="translate(254 0) scale(-1,1)"
+                  />
+                </svg>
+              </div>
+              <div id="screen" class="screen abs">
+                <div class="score off">8888</div>
+                <div id="timeColon" class="score timeColon off">
+                  <div>.</div>
+                  <div>.</div>
+                </div>
+                <div id="time" class="score off"></div>
+                <div id="score" class="score off"></div>
+                <div id="b11" class="ball"></div>
+                <div id="b12" class="ball"></div>
+                <div id="b13" class="ball"></div>
+                <div id="b14" class="ball"></div>
+                <div id="b15" class="ball"></div>
+                <div id="b16" class="ball"></div>
+                <div id="b17" class="ball"></div>
+                <div id="b18" class="ball"></div>
+                <div id="b19" class="ball"></div>
+                <div id="b110" class="ball"></div>
+                <div id="b111" class="ball"></div>
+                <div id="b112" class="ball"></div>
+                <div id="b21" class="ball"></div>
+                <div id="b22" class="ball"></div>
+                <div id="b23" class="ball"></div>
+                <div id="b24" class="ball"></div>
+                <div id="b25" class="ball"></div>
+                <div id="b26" class="ball"></div>
+                <div id="b27" class="ball"></div>
+                <div id="b28" class="ball"></div>
+                <div id="b29" class="ball"></div>
+                <div id="b210" class="ball"></div>
+                <div id="b31" class="ball"></div>
+                <div id="b32" class="ball"></div>
+                <div id="b33" class="ball"></div>
+                <div id="b34" class="ball"></div>
+                <div id="b35" class="ball"></div>
+                <div id="b36" class="ball"></div>
+                <div id="b37" class="ball"></div>
+                <div id="b38" class="ball"></div>
+                <svg id="man" width="254" height="162" fill="black">
+                  <g id="body" class="off">
+                    <circle cx="127" cy="127" r="11" />
                     <ellipse cx="127" cy="103" rx="14" ry="11" />
                     <ellipse cx="114" cy="103" rx="3" ry="6" />
                     <ellipse cx="140" cy="103" rx="3" ry="6" />
@@ -38,62 +134,80 @@
                     <line x1="127" y1="127" x2="127" y2="103" class="svgline" />
                     <line x1="113" y1="120" x2="91" y2="123" class="svgline" />
                     <line x1="141" y1="120" x2="163" y2="123" class="svgline" />
-                </g>
-                <g id="a11" class="off">
+                  </g>
+                  <g id="a11" class="off">
                     <line x1="81" y1="123" x2="68" y2="107" class="svgline" />
                     <path d="M 61 103 a 7 7 0 0 0 10 0" class="svgline" />
-                </g>
-                <g id="a12" class="off">
+                  </g>
+                  <g id="a12" class="off">
                     <line x1="85" y1="119" x2="82" y2="107" class="svgline" />
                     <path d="M 76 103 a 7 7 0 0 0 10 0" class="svgline" />
-                </g>
-                <g id="a13" class="off">
+                  </g>
+                  <g id="a13" class="off">
                     <line x1="90" y1="117" x2="94" y2="107" class="svgline" />
                     <path d="M 91 103 a 7 7 0 0 0 10 0" class="svgline" />
-                </g>
-                <g id="a21" class="off">
+                  </g>
+                  <g id="a21" class="off">
                     <line x1="164" y1="117" x2="160" y2="107" class="svgline" />
                     <path d="M 163 103 a 7 7 0 0 1 -10 0" class="svgline" />
-                </g>
-                <g id="a22" class="off">
+                  </g>
+                  <g id="a22" class="off">
                     <line x1="169" y1="119" x2="172" y2="107" class="svgline" />
                     <path d="M 178 103 a 7 7 0 0 1 -10 0" class="svgline" />
-                </g>
-                <g id="a23" class="off">
+                  </g>
+                  <g id="a23" class="off">
                     <line x1="173" y1="123" x2="186" y2="107" class="svgline" />
                     <path d="M 193 103 a 7 7 0 0 1 -10 0" class="svgline" />
-                </g>
-                <g id="l11" class="off">
+                  </g>
+                  <g id="l11" class="off">
                     <line x1="121" y1="149" x2="112" y2="149" class="svgline" />
                     <path d="M 121 140 a 7 7 0 0 0 0 9" class="svgline" />
-                </g>
-                <g id="l12" class="off">
+                  </g>
+                  <g id="l12" class="off">
                     <line x1="107" y1="139" x2="100" y2="134" class="svgline" />
                     <path d="M 107 139 a 7 7 0 0 1 7 -6" class="svgline" />
-                </g>
-                <g id="l21" class="off">
+                  </g>
+                  <g id="l21" class="off">
                     <line x1="133" y1="149" x2="142" y2="149" class="svgline" />
                     <path d="M 133 140 a 7 7 0 0 1 0 9" class="svgline" />
-                </g>
-                <g id="l22" class="off">
+                  </g>
+                  <g id="l22" class="off">
                     <line x1="147" y1="139" x2="154" y2="134" class="svgline" />
                     <path d="M 147 139 a 7 7 0 0 0 -7 -6" class="svgline" />
-                </g>
-                <g id="c1" class="off">
+                  </g>
+                  <g id="c1" class="off">
                     <line x1="80" y1="149" x2="71" y2="140" class="svgline" />
                     <line x1="80" y1="140" x2="71" y2="149" class="svgline" />
-                    <text x="25" y="149" transform="rotate(-35 30 140)" class="crush">CRUSH!</text>
-                </g>
-                <g id="c2" class="off">
+                    <text
+                      x="25"
+                      y="149"
+                      transform="rotate(-35 30 140)"
+                      class="crush"
+                    >
+                      CRUSH!
+                    </text>
+                  </g>
+                  <g id="c2" class="off">
                     <line x1="174" y1="149" x2="183" y2="140" class="svgline" />
                     <line x1="174" y1="140" x2="183" y2="149" class="svgline" />
-                    <text x="192" y="145" transform="rotate(-35 200 140)" class="crush">CRUSH!</text>
-                </g>
-            </svg>
+                    <text
+                      x="192"
+                      y="145"
+                      transform="rotate(-35 200 140)"
+                      class="crush"
+                    >
+                      CRUSH!
+                    </text>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+      <div id="description" class="text">Start game with "<b>A</b>" or "<b>B</b>", move with <b>arrow keys</b> and check time with "<b>T</b>". Sound ON.</div>
     </div>
-    
 
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>
