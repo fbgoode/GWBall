@@ -23,8 +23,8 @@
 
 This application was developed as a course project at GeeksHubs Academy's Full Stack Developer Bootcamp by Federico Báez on 2021-1-19 to 2021-1-22.
 
-<img src="img/screenshot.png">
 <p align="center">
+<img src="img/screenshot.png" style="max-width:70%"><br>
 <sub>Browser preview</sub>
 </p>
 
