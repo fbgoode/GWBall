@@ -1,8 +1,8 @@
 document.addEventListener('keydown', inputManager);
 
-var beepM = new Audio("/wav/move.wav");
-var beepC = new Audio("/wav/catch.wav");
-var beepF = new Audio("/wav/fail.wav");
+var beepM = document.getElementById("beepM");
+var beepC = document.getElementById("beepC");
+var beepF = document.getElementById("beepF");
 const screenObj = document.getElementById("screen");
 const bodyObj = document.getElementById("body");
 const scoreObj = document.getElementById("score");
