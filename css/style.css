@@ -142,6 +142,8 @@ body {
   letter-spacing: 0.1em;
 }
 .buttonSet {
+  width: 5em;
+  height: 5.5em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -338,14 +340,10 @@ body {
   box-shadow: 0 0 0.05em 0.1em rgba(0, 0, 0, 0.7);
 }
 #lButtonSet {
-  width: 5em;
-  height: 5.5em;
   bottom: -0.7em;
   left: -6.5em;
 }
 #rButtonSet {
-  width: 5em;
-  height: 5.5em;
   bottom: -0.7em;
   right: -6.5em;
 }
@@ -485,12 +483,12 @@ body {
     display: none;
   }
   #logo {
-    top: -6em;
-    left: 1.5em;
+    top: 20.5em;
+    left: 7.9em;
   }
   #BALL {
-    top: -4em;
-    right: 1.5em;
+    top: 24.6em;
+    right: 8.1em;
   }
   #labels {
     right: 1.5em;
@@ -499,20 +497,32 @@ body {
     right: 1.5em;
   }
   #lButtonSet {
-    bottom: -10em;
-    left: 2em;
+    bottom: -11em;
+    left: 1em;
   }
   #rButtonSet {
-    bottom: -10em;
-    right: 2em;
+    bottom: -11em;
+    right: 1em;
   }
   .sizemaster {
-    height: 37.5em;
+    height: 33em;
   }
   #frontBody {
-    height: 34em;
+    height: 29.5em;
   }
   #groove {
-    margin-top: 6em;
+    margin-top: 1em;
+  }
+  .buttonSet {
+    width: 6em;
+    height: 6.5em;
+  }
+  .mButtonSlot {
+    width: 4.5em;
+    height: 4.5em;
+  }
+  .mButton {
+    width: 3.6em;
+    height: 3.6em;
   }
 }
