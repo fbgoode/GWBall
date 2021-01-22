@@ -1,5 +1,3 @@
-document.addEventListener('keydown', inputManager);
-
 var beepM = document.getElementById("beepM");
 var beepC = document.getElementById("beepC");
 var beepF = document.getElementById("beepF");
@@ -10,6 +8,11 @@ const timeObj = document.getElementById("time");
 const timeColonObj = document.getElementById("timeColon");
 const c1Obj = document.getElementById("c1");
 const c2Obj = document.getElementById("c2");
+const lButtonObj = document.getElementById("lButton");
+const rButtonObj = document.getElementById("rButton");
+const buttonAObj = document.getElementById("buttonA");
+const buttonBObj = document.getElementById("buttonB");
+const buttonTObj = document.getElementById("buttonT");
 var b1 = 1;
 var b2 = 10;
 var b3 = 1;
@@ -20,33 +23,72 @@ var a = 2;
 var t = 500;
 var score = 0;
 var gameN = 0;
+var gameON = 0;
+
+document.addEventListener('keydown', inputManager);
+document.addEventListener('keyup', keyupManager);
+lButtonObj.addEventListener('click', function() { move(-1); });
+rButtonObj.addEventListener('click', function() { move(1); });
+buttonAObj.addEventListener('click', gameStartA);
+buttonBObj.addEventListener('click', gameStartB);
+buttonTObj.addEventListener('click', displayTime);
 
 function inputManager (e) {
     switch (e.key) {
         case "a":
         case "A":
+            buttonAObj.classList.add("button-active");
             gameStartA();
             break;
         case "b":
         case "B":
+            buttonBObj.classList.add("button-active");
             gameStartB();
             break;
         case "t":
         case "T":
+            buttonTObj.classList.add("button-active");
             displayTime();
             break;
         case "ArrowLeft":
+            lButtonObj.classList.add("mButton-active");
             move(-1);
             break;
         case "ArrowRight":
+            rButtonObj.classList.add("mButton-active");
             move(1);
+            break;
+    }
+}
+
+function keyupManager (e) {
+    switch (e.key) {
+        case "a":
+        case "A":
+            buttonAObj.classList.remove("button-active");
+            break;
+        case "b":
+        case "B":
+            buttonBObj.classList.remove("button-active");
+            break;
+        case "t":
+        case "T":
+            buttonTObj.classList.remove("button-active");
+            break;
+        case "ArrowLeft":
+            lButtonObj.classList.remove("mButton-active");
+            break;
+        case "ArrowRight":
+            rButtonObj.classList.remove("mButton-active");
             break;
     }
 }
 
 async function displayTime() {
     var now = new Date();
-    timeObj.innerHTML = " " + now.getHours() + now.getMinutes()
+    let minutes = now.getMinutes();
+    if (minutes<10) minutes="0"+minutes;
+    timeObj.innerHTML = " " + now.getHours() + minutes;
     timeColonObj.classList.add("on");
     timeObj.classList.add("on");
     scoreObj.classList.remove("on");
@@ -58,6 +100,7 @@ async function displayTime() {
 }
 
 async function move(d) {
+    if (gameON==0) return;
     let p = a + d;
     if (p<1 || p>3) return;
     document.getElementById("a1"+a).classList.remove("on");
@@ -82,6 +125,7 @@ async function move(d) {
 }
 
 async function gameStartA() {
+    gameON=0;
     gameN++;
     let gN = gameN;
     screenOff();
@@ -95,6 +139,7 @@ async function gameStartA() {
     await screenOn();
     document.getElementById("b1"+b1).classList.add("on");
     document.getElementById("b2"+b2).classList.add("on");
+    gameON=1;
     await sleep(800);
     t = 500;
     if (gN!=gameN) return;
@@ -102,6 +147,7 @@ async function gameStartA() {
 }
 
 async function gameStartB() {
+    gameON=0;
     gameN++;
     let gN = gameN;
     screenOff();
@@ -118,6 +164,7 @@ async function gameStartB() {
     document.getElementById("b1"+b1).classList.add("on");
     document.getElementById("b2"+b2).classList.add("on");
     document.getElementById("b3"+b3).classList.add("on");
+    gameON=1;
     await sleep(800);
     t = 350;
     if (gN!=gameN) return;
@@ -166,6 +213,7 @@ async function tickA2(gN) {
             document.getElementById("b210").classList.remove("on");
             c2Obj.classList.add("on");
             beepF.play();
+            gameON=0;
             return;
         }
     } else if (p2<1) {
@@ -180,6 +228,7 @@ async function tickA2(gN) {
             document.getElementById("b21").classList.remove("on");
             c1Obj.classList.add("on");
             beepF.play();
+            gameON=0;
             return;
         }
     } else {
@@ -208,6 +257,7 @@ async function tickA1(gN) {
             document.getElementById("b112").classList.remove("on");
             c2Obj.classList.add("on");
             beepF.play();
+            gameON=0;
             return;
         }
     } else if (p1<1) {
@@ -222,6 +272,7 @@ async function tickA1(gN) {
             document.getElementById("b11").classList.remove("on");
             c1Obj.classList.add("on");
             beepF.play();
+            gameON=0;
             return;
         }
     } else {
@@ -250,6 +301,7 @@ async function tickB3(gN) {
             document.getElementById("b38").classList.remove("on");
             c2Obj.classList.add("on");
             beepF.play();
+            gameON=0;
             return;
         }
     } else if (p3<1) {
@@ -264,6 +316,7 @@ async function tickB3(gN) {
             document.getElementById("b31").classList.remove("on");
             c1Obj.classList.add("on");
             beepF.play();
+            gameON=0;
             return;
         }
     } else {
@@ -292,6 +345,7 @@ async function tickB2(gN) {
             document.getElementById("b210").classList.remove("on");
             c2Obj.classList.add("on");
             beepF.play();
+            gameON=0;
             return;
         }
     } else if (p2<1) {
@@ -306,6 +360,7 @@ async function tickB2(gN) {
             document.getElementById("b21").classList.remove("on");
             c1Obj.classList.add("on");
             beepF.play();
+            gameON=0;
             return;
         }
     } else {
@@ -334,6 +389,7 @@ async function tickB1(gN) {
             document.getElementById("b112").classList.remove("on");
             c2Obj.classList.add("on");
             beepF.play();
+            gameON=0;
             return;
         }
     } else if (p1<1) {
@@ -348,6 +404,7 @@ async function tickB1(gN) {
             document.getElementById("b11").classList.remove("on");
             c1Obj.classList.add("on");
             beepF.play();
+            gameON=0;
             return;
         }
     } else {

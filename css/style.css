@@ -128,6 +128,12 @@ body {
   inset -0.05em 0.05em 0.1em 0.1em rgba(255, 255, 255, 0.2),
   -0.05em 0.1em 0.1em 0.15em rgba(0, 0, 0, 0.4);
 }
+.button:active, .button-active {
+  background-color: rgb(151, 151, 151);
+  box-shadow: inset 0.1em -0.1em 0.1em -0.07em rgba(0, 0, 0, 0.4),
+  inset 0.05em -0.05em 0.3em 0.15em rgba(0, 0, 0, 0.3),
+  -0.05em 0.1em 0.1em 0.07em rgba(0, 0, 0, 0.4);
+}
 .aclText {
   font-size: 0.55em;
   font-weight: bold;
@@ -167,6 +173,12 @@ body {
               -0.05em 0.1em 0.2em 0.2em rgba(0, 0, 0, 0.3),
               -0.07em 0.15em 0.3em 0 rgba(0, 0, 0, 0.5);
 }
+.mButton:active, .mButton-active {
+  background-color: rgb(230, 35, 45);
+  box-shadow: inset 0.05em -0.05em 0.3em 0.2em rgba(0, 0, 0, 0.2),
+              -0.05em 0.1em 0.2em 0.2em rgba(0, 0, 0, 0.3),
+              -0.07em 0.15em 0.3em -0.15em rgba(0, 0, 0, 0.5);
+}
 .arrow {
   width:1.6em;
   opacity:0.8;
@@ -193,13 +205,14 @@ body {
   justify-content: center;
   align-items: center;
   background-color: rgb(148, 44, 58);
-  border-radius: 0.5em;
+  border-radius: 0.6em;
   box-shadow: inset 0 -0.7em 0.2em 0 rgba(0, 0, 0, 0.3),
               inset 0 0.7em 0.2em 0 rgba(255, 255, 255, 0.2),
               inset 0.7em 0 0.2em 0 rgba(255, 255, 255, 0.1),
               inset -0.7em 0 0.2em 0 rgba(255, 255, 255, 0.1),
-              -0.18em 0.3em 0.4em 0.3em rgba(0, 0, 0, 0.16),
-              -0.05em 0.1em 0.3em 0.1em rgba(0, 0, 0, 0.3);
+              -0.18em 0.3em 0.4em 0.4em rgba(0, 0, 0, 0.16),
+              -0.05em 0.1em 0.3em 0.1em rgba(0, 0, 0, 0.3),
+              inset 0 0 0.2em 0.1em rgba(0, 0, 0, 0.8);
 }
 #frontBody {
   width:35.38em;
@@ -342,6 +355,7 @@ body {
   letter-spacing: 0;
   opacity:0.5;
   margin-top: 3em;
+  text-align: center;
 }
 
 
