@@ -2,7 +2,7 @@
   <br>Game & Watch BALL
 </h1>
 
-<h4 align="center">A functional mockup of Nintendo's first handheld console. By Fede Báez.</h4>
+<h4 align="center">A functioning mockup of Nintendo's first handheld console. By Fede Báez.</h4>
 
 <br>
 <p align="center">
@@ -19,13 +19,15 @@
 <tr>
 <td>
   
-**GWBall** is a web mockup of Nintendo's "Game & Watch BALL" handheld game, built with HTML5, CSS3 and vanilla JS.
+**GWBall** is a functioning web mockup of Nintendo's classic handheld game "Game & Watch BALL", built with HTML5, CSS3 and vanilla JS.
 
-This application was developed as a course project at GeeksHubs Academy's Full Stack Developer Bootcamp by Federico Báez on 2021-1-19 to 2021-1-22.
+The game may be played in any modern browser, including mobile.
+
+This application was developed as a course project at <a href="https://geekshubsacademy.com/">GeeksHubs Academy</a>'s Full Stack Developer Bootcamp by Federico Báez in Valencia, Spain on 2021-1-19 to 2021-1-22.
 
 <p align="center">
-<img src="img/screenshot.png" style="max-width:70%"><br>
-<sub>Browser preview</sub>
+<img src="img/screenshot.png" width=600><br>
+<sub>Screenshot (PC, Chrome v87)</sub>
 </p>
 
 <h3>About the console</h3>
