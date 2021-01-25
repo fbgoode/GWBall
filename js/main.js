@@ -209,6 +209,7 @@ async function tickA2(gN) {
             tlower();
             beepC.currentTime = 0;
             beepC.play();
+            p2 = b2 + v2;
         } else {
             document.getElementById("b210").classList.remove("on");
             c2Obj.classList.add("on");
@@ -224,6 +225,7 @@ async function tickA2(gN) {
             tlower();
             beepC.currentTime = 0;
             beepC.play();
+            p2 = b2 + v2;
         } else {
             document.getElementById("b21").classList.remove("on");
             c1Obj.classList.add("on");
@@ -232,12 +234,12 @@ async function tickA2(gN) {
             return;
         }
     } else {
-        document.getElementById("b2"+b2).classList.remove("on");
-        document.getElementById("b2"+p2).classList.add("on");
-        b2 = p2;
         beepM.currentTime = 0;
         beepM.play();
     }
+    document.getElementById("b2"+b2).classList.remove("on");
+    document.getElementById("b2"+p2).classList.add("on");
+    b2 = p2;
     await sleep(t);
     if (gN!=gameN) return;
     tickA1(gN);
@@ -253,6 +255,7 @@ async function tickA1(gN) {
             tlower();
             beepC.currentTime = 0;
             beepC.play();
+            p1 = b1 + v1;
         } else {
             document.getElementById("b112").classList.remove("on");
             c2Obj.classList.add("on");
@@ -268,6 +271,7 @@ async function tickA1(gN) {
             tlower();
             beepC.currentTime = 0;
             beepC.play();
+            p1 = b1 + v1;
         } else {
             document.getElementById("b11").classList.remove("on");
             c1Obj.classList.add("on");
@@ -276,12 +280,12 @@ async function tickA1(gN) {
             return;
         }
     } else {
-        document.getElementById("b1"+b1).classList.remove("on");
-        document.getElementById("b1"+p1).classList.add("on");
-        b1 = p1;
         beepM.currentTime = 0;
         beepM.play();
     }
+    document.getElementById("b1"+b1).classList.remove("on");
+    document.getElementById("b1"+p1).classList.add("on");
+    b1 = p1;
     await sleep(t);
     if (gN!=gameN) return;
     tickA2(gN);
@@ -297,6 +301,7 @@ async function tickB3(gN) {
             tlower();
             beepC.currentTime = 0;
             beepC.play();
+            p3 = b3 + v3;
         } else {
             document.getElementById("b38").classList.remove("on");
             c2Obj.classList.add("on");
@@ -312,6 +317,7 @@ async function tickB3(gN) {
             tlower();
             beepC.currentTime = 0;
             beepC.play();
+            p3 = b3 + v3;
         } else {
             document.getElementById("b31").classList.remove("on");
             c1Obj.classList.add("on");
@@ -320,12 +326,12 @@ async function tickB3(gN) {
             return;
         }
     } else {
-        document.getElementById("b3"+b3).classList.remove("on");
-        document.getElementById("b3"+p3).classList.add("on");
-        b3 = p3;
         beepM.currentTime = 0;
         beepM.play();
     }
+    document.getElementById("b3"+b3).classList.remove("on");
+    document.getElementById("b3"+p3).classList.add("on");
+    b3 = p3;
     await sleep(t);
     if (gN!=gameN) return;
     tickB2(gN);
@@ -341,6 +347,7 @@ async function tickB2(gN) {
             tlower();
             beepC.currentTime = 0;
             beepC.play();
+            p2 = b2 + v2;
         } else {
             document.getElementById("b210").classList.remove("on");
             c2Obj.classList.add("on");
@@ -356,6 +363,7 @@ async function tickB2(gN) {
             tlower();
             beepC.currentTime = 0;
             beepC.play();
+            p2 = b2 + v2;
         } else {
             document.getElementById("b21").classList.remove("on");
             c1Obj.classList.add("on");
@@ -364,12 +372,12 @@ async function tickB2(gN) {
             return;
         }
     } else {
-        document.getElementById("b2"+b2).classList.remove("on");
-        document.getElementById("b2"+p2).classList.add("on");
-        b2 = p2;
         beepM.currentTime = 0;
         beepM.play();
     }
+    document.getElementById("b2"+b2).classList.remove("on");
+    document.getElementById("b2"+p2).classList.add("on");
+    b2 = p2;
     await sleep(t);
     if (gN!=gameN) return;
     tickB1(gN);
@@ -385,6 +393,7 @@ async function tickB1(gN) {
             tlower();
             beepC.currentTime = 0;
             beepC.play();
+            p1 = b1 + v1;
         } else {
             document.getElementById("b112").classList.remove("on");
             c2Obj.classList.add("on");
@@ -400,6 +409,7 @@ async function tickB1(gN) {
             tlower();
             beepC.currentTime = 0;
             beepC.play();
+            p1 = b1 + v1;
         } else {
             document.getElementById("b11").classList.remove("on");
             c1Obj.classList.add("on");
@@ -408,12 +418,12 @@ async function tickB1(gN) {
             return;
         }
     } else {
-        document.getElementById("b1"+b1).classList.remove("on");
-        document.getElementById("b1"+p1).classList.add("on");
-        b1 = p1;
         beepM.currentTime = 0;
         beepM.play();
     }
+    document.getElementById("b1"+b1).classList.remove("on");
+    document.getElementById("b1"+p1).classList.add("on");
+    b1 = p1;
     await sleep(t);
     if (gN!=gameN) return;
     tickB3(gN);
