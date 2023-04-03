@@ -2,7 +2,7 @@
   <br>Game & Watch BALL
 </h1>
 
-<h4 align="center">A functioning mockup of Nintendo's first handheld console. By Fede Báez.</h4>
+<h4 align="center">A functioning digital mockup of Nintendo's first handheld console, by Fede Báez.</h4>
 
 <br>
 <p align="center">
@@ -13,17 +13,20 @@
 
 ---
 
+```diff
+! Disclaimer: Rapid prototyping - Not clean code
+```
+
 ## About
 
 <table>
 <tr>
 <td>
-  
-**GWBall** is a functioning web mockup of Nintendo's classic handheld game "Game & Watch BALL", built with HTML5, CSS3 and vanilla JS.
 
+This app was developed as a training exercise. <a href="https://fbgoode.github.io/GWBall">Check out the result here</a>.
+
+**GWBall** is a digital mockup of Nintendo's classic handheld game "Game & Watch BALL", built with HTML5, CSS3 and vanilla JS.
 The game may be played in any modern browser, including mobile.
-
-This application was developed as a course project at <a href="https://geekshubsacademy.com/">GeeksHubs Academy</a>'s Full Stack Developer Bootcamp by Federico Báez in Valencia, Spain on 2021-1-19 to 2021-1-22.
 
 <p align="center">
 <img src="img/screenshot.png" width=600><br>
@@ -34,6 +37,7 @@ This application was developed as a course project at <a href="https://geekshubs
 <p>
 <sub>Source: <a href="https://en.wikipedia.org/wiki/Game_%26_Watch">Wikipedia</a></sub>
 </p>
+
 The **Game & Watch** brand is a series of handheld electronic games developed, manufactured, released and marketed by Nintendo from 1980 to 1991. Created by game designer Gunpei Yokoi, the product derived its name from its featuring a single game as well as a clock on an LCD screen. The series sold a combined 43.4 million units worldwide, and was the earliest Nintendo video game product to gain major success.
 
 **Ball** is a Game & Watch game released as a part of the Silver series on April 28, 1980. It was the first Game & Watch game. It is a single-screen single-player Game & Watch.
@@ -48,8 +52,6 @@ In Game A, the player tosses two balls in the air. As the balls fall, the player
 
 You may play the game directly from its <a href="https://fbgoode.github.io/GWBall">GitHub Pages deployment</a>.
 
-Alternatively, the application may be downloaded from <a href="https://github.com/fbgoode/GWBall/archive/main.zip">this link</a> and executed using any modern browser (including mobile).
-
 ##### 1. Open game
 
 ##### 2. Select game mode A (easier) or B (harder) clicking on buttons or with keyboard keys "A" or "B"
@@ -63,7 +65,7 @@ Alternatively, the application may be downloaded from <a href="https://github.co
 
 * Responsive
 * Includes sounds
-* Clickable / touchable buttons
-* Keyboard enabled
+* Mouse/touch controls
+* Keyboard controls
 * Functions as the original console with a slight step up in game difficulty
-* Only uses HTML5, CSS3 and vanilla JS
+* Only HTML5, CSS3 and vanilla JS
